@@ -1,7 +1,7 @@
 # Git Workflow Workshop
 ## How to open ?
 
-Simply open presentation.html in a browser and you should have access to the slideshow :)
+Simply open presentation.html in a browser and you should have access to the slideshow 🙂
 
 
 #### Created by

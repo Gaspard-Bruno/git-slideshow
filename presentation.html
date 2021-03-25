@@ -8,7 +8,7 @@
     />
     <meta charset="utf-8" />
     <style>
-      @import url("https://fonts.googleapis.com/css?family=Roboto|Shadows+Into+Light&display=swap");
+      @import url("https://fonts.googleapis.com/css?family=Roboto|Raleway&display=swap");
       @import url(
         https://fonts.googleapis.com/css?family=Fira+Mono:400,
         500,
@@ -17,20 +17,34 @@
 
       body {
         font-family: "Roboto", sans-serif;
-        background-color: #141422;
-        color: #20968b;
+        color: #000;
       }
       .remark-slide-container {
-        background-image: linear-gradient(to right, #141422, #20968b);
+        background: rgba(6,14,159,1);
       }
       .remark-slide-scaler {
-        box-shadow: 0 0 30px #2cc2b3af;
+        box-shadow: 0 0;
+      }
+      .remark-slide-number {
+        color: #fff;
+      }
+      footer {
+        color: #fff;
+        background: rgba(6,14,159,1);
+        position: fixed;
+        top: 2.5%;
+        z-index: 20;
+        display: flex;
+        left: 5%;
+        font-size: 32px;
+        font-weight: bold;s
       }
       .remark-slide > div {
-        background-color: #141422;
+        background: linear-gradient(180deg, rgba(255,255,255,1) 85%, rgba(6,14,159,1) 85%);
       }
       .remark-inline-code {
-        background-color: #99e5dc;
+        background-color: #7f81a4;
+        color: #ddd;
         padding: 2px;
       }
       img {
@@ -39,9 +53,11 @@
         max-height: 20vh;
       }
       td {
+        font-size: 18px;
         border-bottom: 1px solid;
       }
       th {
+        font-size: 18px;
         border-bottom: 2px dotted;
       }
       h1,
@@ -49,14 +65,15 @@
       h3 {
         margin: 0 auto;
         width: fit-content;
-        font-family: "Shadows Into Light", cursive;
-        font-weight: normal;
+        font-family: "Raleway";
+        font-weight: bold;
       }
       h4 {
         margin: 0 auto;
         width: fit-content;
         font-size: 1.5em;
-        color: #32fbe8;
+        margin-top: 40px;
+        color: #060e9f;
       }
     </style>
   </head>
@@ -67,8 +84,7 @@ class: center, middle
 title: Git 101
 
 # Git 101*
-# ONE-O-ONE*
-# for dummies*
+#### *for dummies
 
 ---
 
@@ -205,5 +221,10 @@ Each developer clones the repo, works locally on the code, makes a commit with c
     <script>
       var slideshow = remark.create();
     </script>
+  <body>
+    <footer>
+      Gaspard + Bruno
+    </footer>
   </body>
+
 </html>
