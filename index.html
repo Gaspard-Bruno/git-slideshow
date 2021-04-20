@@ -196,8 +196,8 @@ Each developer clones the repo, works locally on the code, makes a commit with c
 |`git config --global credential.helper 'cache --timeout 43200'`|Save your HTTPS credentials for 24hours|
 |`git commit —amend —no-edit && git push origin`| Quick ammend and push to origin|
 |`git reset HEAD`|Unstage current changes|
-### Change default git editor
-`git config --global core.editor "'C:\Program Files (x86)\Microsoft VS Code\code.exe' -w"`
+### Change default git editor (VS Code in example)
+`git config --global core.editor "code -w"`
 ### Purge merged branches
 `git checkout <BRANCH_NAME> && git branch --merged | grep -v '\\*' | xargs -n 1 git branch -d`
 ### Panic Button
