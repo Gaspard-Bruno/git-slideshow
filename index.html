@@ -7,75 +7,7 @@
       href="https://raw.githubusercontent.com/schacon/git-scm/master/source/favicon.ico"
     />
     <meta charset="utf-8" />
-    <style>
-      @import url("https://fonts.googleapis.com/css?family=Roboto|Raleway&display=swap");
-      @import url(
-        https://fonts.googleapis.com/css?family=Fira+Mono:400,
-        500,
-        700&display=swap
-      );
-
-      body {
-        font-family: "Roboto", sans-serif;
-        color: #000;
-      }
-      .remark-slide-container {
-        background: rgba(6,14,159,1);
-      }
-      .remark-slide-scaler {
-        box-shadow: 0 0;
-      }
-      .remark-slide-number {
-        color: #fff;
-      }
-      footer {
-        color: #fff;
-        background: rgba(6,14,159,1);
-        position: fixed;
-        bottom: 2.5%;
-        z-index: 20;
-        display: flex;
-        left: 5%;
-        font-size: 32px;
-        font-weight: bold;s
-      }
-      .remark-slide > div {
-        background: linear-gradient(180deg, rgba(255,255,255,1) 85%, rgba(6,14,159,1) 85%);
-      }
-      .remark-inline-code {
-        background-color: #7f81a4;
-        color: #ddd;
-        padding: 2px;
-      }
-      img {
-        margin: 0 auto;
-        display: block;
-        max-height: 20vh;
-      }
-      td {
-        font-size: 18px;
-        border-bottom: 1px solid;
-      }
-      th {
-        font-size: 18px;
-        border-bottom: 2px dotted;
-      }
-      h1,
-      h2,
-      h3 {
-        margin: 0 auto;
-        width: fit-content;
-        font-family: "Raleway";
-        font-weight: bold;
-      }
-      h4 {
-        margin: 0 auto;
-        width: fit-content;
-        font-size: 1.5em;
-        margin-top: 40px;
-        color: #060e9f;
-      }
-    </style>
+    <link rel="stylesheet" href="./index.css"/>
   </head>
   <body>
     <textarea id="source">
@@ -125,7 +57,6 @@ title: Git 101
 ---
 # Git Workflows
 ## Basic Workflow
-### Description
 The idea is simple: there is one central repository.
 Each developer clones the repo, works locally on the code, makes a commit with changes, and push it to the central repository for other developers to pull and use in their work.
 - The basic workflow can work fine if you're the only developer working on a project at a given time.
@@ -144,7 +75,6 @@ Each developer clones the repo, works locally on the code, makes a commit with c
 ---
 # Git Workflows
 ## Feature Branch Workflow
-### Description
 - For each new functionality, a new  branch should be created.
 - This new branch will be where we develop and test a new feature.
 - Once the feature is done, the branch is merged/rebased onto the master branch.
@@ -175,6 +105,14 @@ Each developer clones the repo, works locally on the code, makes a commit with c
 ## Force Push
 - If you try to push the rebased branch back to a remote repository, Git will prevent you from doing so because it conflicts with the remote branch. *only appliable if you did pushes in-between commits*
 - But, you can force the push to go through like so:
+
+`git push origin <BRANCH> -f` OR `git push origin <BRANCH> --force`
+- This overwrites the remote branch to match the rebased one from your repository. So, be very careful to use this command only when you know exactly what you’re doing.
+- `git pull --rebase` does a pull but rewinds your local commits on top of the target branch
+---
+# Real Life Examples
+## Merge vs Rebase
+![Rebase vs Merge](images/ss1.png)
 
 `git push origin <BRANCH> -f` OR `git push origin <BRANCH> --force`
 - This overwrites the remote branch to match the rebased one from your repository. So, be very careful to use this command only when you know exactly what you’re doing.

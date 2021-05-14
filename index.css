@@ -1,0 +1,63 @@
+      @import url("https://fonts.googleapis.com/css?family=Roboto|Raleway&display=swap");
+      @import url(https://fonts.googleapis.com/css?family=Fira+Mono:400,500,700&display=swap);
+
+      body {
+        font-family: "Roboto", sans-serif;
+        color: #000;
+      }
+      .remark-slide-container {
+        background: rgba(6,14,159,1);
+      }
+      .remark-slide-scaler {
+        box-shadow: 0 0;
+      }
+      .remark-slide-number {
+        color: #fff;
+      }
+      footer {
+        color: #fff;
+        background: rgba(6,14,159,1);
+        position: fixed;
+        bottom: 2.5%;
+        z-index: 20;
+        display: flex;
+        left: 5%;
+        font-size: 32px;
+        font-weight: bold;
+      }
+      .remark-slide > div {
+        background: linear-gradient(180deg, rgba(255,255,255,1) 85%, rgba(6,14,159,1) 85%);
+      }
+      .remark-inline-code {
+        background-color: #7f81a4;
+        color: #ddd;
+        padding: 2px;
+      }
+      img {
+        margin: 0 auto;
+        display: block;
+        max-height: 20vh;
+      }
+      td {
+        font-size: 18px;
+        border-bottom: 1px solid;
+      }
+      th {
+        font-size: 18px;
+        border-bottom: 2px dotted;
+      }
+      h1,
+      h2,
+      h3 {
+        margin: 0 auto;
+        width: fit-content;
+        font-family: "Raleway";
+        font-weight: bold;
+      }
+      h4 {
+        margin: 0 auto;
+        width: fit-content;
+        font-size: 1.5em;
+        margin-top: 40px;
+        color: #060e9f;
+      }

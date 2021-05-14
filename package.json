@@ -1,0 +1,22 @@
+{
+  "name": "git-slideshow",
+  "version": "1.0.0",
+  "description": "Simply open presentation.html in a browser and you should have access to the slideshow 🙂",
+  "main": "index.html",
+  "scripts": {
+    "start": "open ./index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Gaspard-Bruno/git-slideshow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Gaspard-Bruno/git-slideshow/issues"
+  },
+  "homepage": "https://github.com/Gaspard-Bruno/git-slideshow#readme",
+  "devDependencies": {
+    "open": "^8.0.8"
+  }
+}
