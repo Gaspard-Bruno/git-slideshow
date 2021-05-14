@@ -1,16 +1,3 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Git 101</title>
-    <link
-      rel="shortcut icon"
-      href="https://raw.githubusercontent.com/schacon/git-scm/master/source/favicon.ico"
-    />
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="./index.css"/>
-  </head>
-  <body>
-    <textarea id="source">
 
 class: center, middle
 title: Git 101
@@ -111,24 +98,12 @@ Each developer clones the repo, works locally on the code, makes a commit with c
 - `git pull --rebase` does a pull but rewinds your local commits on top of the target branch
 ---
 # Real Life Examples
-Here we  have a branch which was recently merged into our repository 👇
+## Merge vs Rebase
+![Rebase vs Merge](images/ss1.png)
+In here we have a branch, `discounts` that's forked from `master` some commits ago. It was recently updated and was ready to merge with `master`.
+If we'd rebased `discounts` we'd end up with `master` + our comit(s). If we merged our branch into master and we'd get a single commit with all the changes.
+#### What happened
 ![Rebase vs Merge](images/ss2.jpg)
-
-- Follow `discounts` purple line to see where it initially forked from the main branch.
-- When ready, the branch was rebased onto master and the local changes were merged onto the `discounts` branch.
-  - This merge commit created a duplicate function which would later give us some trouble
-  ![Rebase vs Merge](images/ss3.jpg)
-- Finally then the rebased & merged branch would later be merged into master via pull request.
----
-# Real Life Examples
-#### What we could have been done ?
-![solution](images/ss4.jpg)
-Here are the steps I'd take to properly merge this branch onto `master`.
-- I'd start by checking out the current branch and rebasing it on top of master
-- I'd then open a pull request which once approved would create a merge commit.
-
-We could also merge the branch into master which would work but would result in a messier history 👇
-![solution](images/ss1.jpg)
 ---
 # Cool Git Commands
 | Command                                                 | Result                                                      |
@@ -165,19 +140,3 @@ We could also merge the branch into master which would work but would result in 
 # Questions
 ![404](https://cdn1.iconfinder.com/data/icons/internet-technology-and-security-2/128/77-512.png)
 #### Doubts not found
-
-
-
-</textarea
-    >
-    <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
-    <script>
-      var slideshow = remark.create();
-    </script>
-  <body>
-    <footer>
-      Gaspard + Bruno
-    </footer>
-  </body>
-
-</html>

@@ -5,6 +5,9 @@
         font-family: "Roboto", sans-serif;
         color: #000;
       }
+      .remark-slide-content, .remark-inline-code {
+        font-size: 14px;
+      }
       .remark-slide-container {
         background: rgba(6,14,159,1);
       }
@@ -26,7 +29,7 @@
         font-weight: bold;
       }
       .remark-slide > div {
-        background: linear-gradient(180deg, rgba(255,255,255,1) 85%, rgba(6,14,159,1) 85%);
+        background: linear-gradient(180deg, rgba(255,255,255,1) 90%, rgba(6,14,159,1) 90%);
       }
       .remark-inline-code {
         background-color: #7f81a4;
@@ -34,7 +37,7 @@
         padding: 2px;
       }
       img {
-        margin: 0 auto;
+        margin: 8px auto;
         display: block;
         max-height: 20vh;
       }
@@ -57,7 +60,7 @@
       h4 {
         margin: 0 auto;
         width: fit-content;
-        font-size: 1.5em;
+        font-size: 1.25em;
         margin-top: 40px;
         color: #060e9f;
       }
