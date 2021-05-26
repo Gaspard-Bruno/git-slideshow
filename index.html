@@ -19,16 +19,6 @@ title: Git 101
 #### *for dummies
 
 ---
-
-# Topics
-
-  - What is Git
-  - Git Workflows
-  - Cool Git Commands
-  - Git GUI's
-  - Questions
-
----
 # Git 101
 ## What is Git ?
 - Git is a Distributed Version Control Systems (DVCS), much like Mercurial or SVN.
@@ -45,6 +35,18 @@ title: Git 101
   - When we commit, git saves the changes that were applied to the original file. (not the actual file)
 - All git operations are kept in your machine for a certain amount of time and are available through `git reflog`
   - *Due to this, it is very hard to permanently delete your work*
+---
+# Git 101
+## What is remote ?
+A remote is simply a pointer to a repo hosted by a provider (Github, Gitlab, Bitbucket)
+![remote fiesta](images/ss5.jpg)
+Notice how we seemingly have 4 master branches ?
+
+We have in fact 3 different remotes and 1 local branch.
+
+We can update/follow a remote's history by adding them to our local repo
+`git remote set-url name https://github.com/organization/repo.git`
+
 ---
 # Git Workflows
 ## Basic Workflow
