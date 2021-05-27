@@ -61,7 +61,7 @@ We can update/follow a remote's history by adding them to our local repo
 ## Basic Workflow
 The idea is simple: there is one central repository.
 Each developer clones the repo, works locally on the code, makes a commit with changes, and push it to the central repository for other developers to pull and use in their work.
-- The basic workflow can work fine if you're the only developer working on a project at a given time.
+- This basic workflow can work fine if you're the only developer working on a project at a given time.
 - Issues arise if 2 developers do changes to the code and push their code at the same time.
 - Developers can align between them when each pushes the changes. Keeping the commits in a single branch.
 - Enter feature branch workflow
@@ -72,7 +72,7 @@ Each developer clones the repo, works locally on the code, makes a commit with c
 ### Commands used
 - `git fetch origin`
 - `git checkout -b "NEW BRANCH NAME"`
-- `git checkout "BRANCH NAME"`
+- `git checkout master`
 - `git merge "NEW BRANCH NAME"`
 ---
 # Git Workflows
@@ -96,8 +96,8 @@ Each developer clones the repo, works locally on the code, makes a commit with c
 # Git Workflows
 ## Golden Rule of Rebasing
 **There are two trade-offs for the pristine commit history the rebase workflow provides: safety and traceability.**
-#### The golden rule of git rebase is to never use it on public branches.
-- The rebase moves all of the commits in master onto the tip of feature.
+#### The golden rule of git rebase is to never use it on public branches. (ie: always rebase onto master and not the other way around)
+- The rebase moves all of the commits in master onto the starting tip of feature.
 - The problem is that this only happened in your repository.
 - All of the other developers are still working with the original master.
 - Since rebasing results in brand new commits, Git will think that your master branch’s history has diverged from everybody else’s.
